@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <meta
+      name="description"
+      content="Plataforma de streaming com visual inspirado na Netflix."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-area">
+        <div class="brand-logo" aria-label="Logo Netflix">N</div>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="#">Início</a>
+          <a href="#">Séries</a>
+          <a href="#">Filmes</a>
+          <a href="#">Novidades</a>
+          <a href="#">Minha lista</a>
+        </nav>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-button" aria-label="Buscar">⌕</button>
+        <button class="icon-button" aria-label="Notificações">🔔</button>
+
+        <div class="profile-menu" aria-label="Perfil do usuário">
+          <span class="profile-avatar">M</span>
+          <span>▼</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Destaque principal">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow">SÉRIE ORIGINAL</p>
+          <h1>Dark</h1>
+
+          <div class="hero-meta">
+            <span>2024</span>
+            <span>TV-MA</span>
+            <span>1 temporada</span>
+          </div>
+
+          <p class="hero-description">
+            Quando uma cidade pequena é envolvida por mistérios temporais, o
+            passado, o presente e o futuro começam a colidir em uma trama
+            fascinante e assustadora.
+          </p>
+
+          <div class="hero-actions">
+            <button class="primary-button" type="button">▶ Assistir</button>
+            <button class="secondary-button" type="button">＋ Minha lista</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Em alta hoje</h2>
+        <div class="movie-row" id="trending-row"></div>
+      </section>
+
+      <section class="content-section">
+        <h2>Continuar assistindo</h2>
+        <div class="movie-row" id="continue-row"></div>
+      </section>
+
+      <section class="content-section">
+        <h2>Minha lista</h2>
+        <div class="movie-row" id="list-row"></div>
+      </section>
+    </main>
+
+    <div class="modal hidden" id="movie-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="true"></div>
+
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="close-button" type="button" aria-label="Fechar modal">✕</button>
+
+        <div class="modal-poster" id="modal-poster"></div>
+
+        <div class="modal-body">
+          <p class="modal-tag">Filme</p>
+          <h3 id="modal-title">Título</h3>
+
+          <div class="modal-meta">
+            <span id="modal-year">2024</span>
+            <span id="modal-rating">16+</span>
+            <span id="modal-duration">2h 04m</span>
+          </div>
+
+          <p id="modal-description"></p>
+
+          <div class="modal-actions">
+            <button class="primary-button" type="button">▶ Assistir</button>
+            <button class="secondary-button" type="button">＋ Minha lista</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
